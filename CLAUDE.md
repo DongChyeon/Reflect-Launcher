@@ -36,6 +36,17 @@ ReflectLauncher는 숫자와 경고 대신 시각적 변화만으로 폰 사용 
 ./gradlew lint
 ```
 
+## 초기 설정
+
+저장소를 클론한 후 Lefthook을 설치해 pre-commit hook을 활성화한다.
+
+```bash
+brew install lefthook
+lefthook install
+```
+
+이후 커밋 시 `ktlintFormat`이 자동 실행된다.
+
 ## 아키텍처
 
 멀티모듈 클린 아키텍처를 채택한다. 레이어 의존 방향:
