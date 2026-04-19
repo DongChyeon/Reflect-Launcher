@@ -1,0 +1,39 @@
+# Built outputs
+/build
+**/build/
+*.apk
+*.aab
+*.dex
+
+# Gradle
+.gradle/
+gradle-wrapper.jar
+
+# Local config (contains SDK path — machine-specific and potentially sensitive)
+local.properties
+
+# IntelliJ / Android Studio
+*.iml
+.idea/
+
+# Native builds
+.externalNativeBuild/
+.cxx/
+
+# Credentials & secrets
+google-services.json
+GoogleService-Info.plist
+keystore.properties
+*.jks
+*.keystore
+release/
+signing/
+
+# Captures (Android Profiler, etc.)
+/captures
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
