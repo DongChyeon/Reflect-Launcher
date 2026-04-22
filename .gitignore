@@ -32,6 +32,9 @@ signing/
 # Captures (Android Profiler, etc.)
 /captures
 
+# Superpowers brainstorm sessions
+.superpowers/
+
 # macOS
 .DS_Store
 
