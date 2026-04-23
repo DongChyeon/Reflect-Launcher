@@ -13,6 +13,7 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.collections.immutable.toImmutableList
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -60,7 +61,7 @@ class HomeViewModel @Inject constructor(
                                         label = slot.label,
                                         alpha = lerp(1.0f, 0.2f, slot.usageFraction)
                                     )
-                                }
+                                }.toImmutableList()
                             )
                         }
                     }

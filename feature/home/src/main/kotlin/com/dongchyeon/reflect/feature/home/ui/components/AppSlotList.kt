@@ -10,10 +10,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.dongchyeon.reflect.feature.home.ui.AppSlotUi
+import kotlinx.collections.immutable.ImmutableList
 
 @Composable
 fun AppSlotList(
-    slots: List<AppSlotUi>,
+    slots: ImmutableList<AppSlotUi>,
     onSlotClick: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {

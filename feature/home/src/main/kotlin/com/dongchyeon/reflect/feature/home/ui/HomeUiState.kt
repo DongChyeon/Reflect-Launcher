@@ -2,6 +2,8 @@ package com.dongchyeon.reflect.feature.home.ui
 
 import androidx.compose.runtime.Immutable
 import kotlin.time.Duration
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.collections.immutable.persistentListOf
 
 @Immutable
 data class HomeUiState(
@@ -10,7 +12,7 @@ data class HomeUiState(
     val timeWithoutPhone: Duration = Duration.ZERO,
     val visitCount: Int = 0,
     val intention: String? = null,
-    val appSlots: List<AppSlotUi> = emptyList(),
+    val appSlots: ImmutableList<AppSlotUi> = persistentListOf(),
     val errorMessage: String? = null
 )
 

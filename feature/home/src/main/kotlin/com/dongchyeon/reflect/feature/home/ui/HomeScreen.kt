@@ -33,7 +33,7 @@ fun HomeScreen(
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val lifecycleOwner = LocalLifecycleOwner.current
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(viewModel) {
         viewModel.sideEffect.collect { effect ->
             when (effect) {
                 is HomeSideEffect.LaunchApp -> onLaunchApp(effect.packageName)

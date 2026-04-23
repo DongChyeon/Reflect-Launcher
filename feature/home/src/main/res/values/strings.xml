@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_guide_title">사용 데이터에 접근할 수 없어요</string>
+    <string name="permission_guide_body">앱 사용 현황 권한을 허용하면 시각적 피드백이 활성화됩니다</string>
+    <string name="permission_guide_action">설정에서 허용하기 →</string>
+</resources>
