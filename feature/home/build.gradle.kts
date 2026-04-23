@@ -33,6 +33,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)
+    implementation(libs.hilt.navigation.compose)
     implementation(libs.kotlinx.coroutines.android)
     testImplementation(libs.junit)
     testImplementation(libs.mockk)
