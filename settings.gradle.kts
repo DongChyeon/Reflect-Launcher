@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Reflect Launcher"
 include(":app")
- 
+include(":core:domain")
+include(":core:data")
+include(":feature:home")
