@@ -52,14 +52,26 @@ fun HomeScreen(
         onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
     }
 
+    HomeContent(
+        uiState = uiState,
+        onEvent = viewModel::onEvent,
+    )
+}
+
+@Composable
+internal fun HomeContent(
+    uiState: HomeUiState,
+    onEvent: (HomeUiEvent) -> Unit,
+    modifier: Modifier = Modifier,
+) {
     if (uiState.isLoading) {
-        Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
             CircularProgressIndicator()
         }
         return
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = modifier.fillMaxSize()) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -88,7 +100,7 @@ fun HomeScreen(
             AppSlotList(
                 slots = uiState.appSlots,
                 onSlotClick = { packageName ->
-                    viewModel.onEvent(HomeUiEvent.AppSlotClicked(packageName))
+                    onEvent(HomeUiEvent.AppSlotClicked(packageName))
                 },
                 modifier = Modifier.fillMaxWidth(),
             )
@@ -96,7 +108,7 @@ fun HomeScreen(
 
         if (!uiState.hasUsagePermission) {
             PermissionGuideOverlay(
-                onGuideClick = { viewModel.onEvent(HomeUiEvent.PermissionGuideClicked) },
+                onGuideClick = { onEvent(HomeUiEvent.PermissionGuideClicked) },
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
                     .padding(16.dp),
