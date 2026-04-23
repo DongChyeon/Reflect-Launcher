@@ -42,12 +42,14 @@ android {
 
 dependencies {
     implementation(project(":feature:home"))
+    implementation(project(":core:domain"))
     implementation(project(":core:data"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
+    implementation(libs.kotlinx.coroutines.android)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.activity.compose)
     testImplementation(libs.junit)
